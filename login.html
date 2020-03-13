@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/75a226b380.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="registro.js"></script>
+
+    <style>
+        .jumbotron {
+            background-image: url(1.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            color: white;
+            height: 900px;
+        }
+        
+        #display-4,
+        .lead {
+            text-align: center;
+        }
+        
+        #tabla {
+            width: 50%;
+            margin: auto;
+            display: none;
+        }
+        
+        .fas {
+            color: #FFF952;
+        }
+        
+        .btn {
+            background-color: #FFF952;
+            color: #094953;
+            border: white 1px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <i class="fas fa-hamburger" width="30" height="30" alt=""></i>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="#">Quienes somos</a>
+                    <a class="nav-item nav-link" href="#">Productos</a>
+                    <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Holi</a>
+                </div>
+            </div>
+    </nav>
+
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1 id="display-4" class="display-4">
+                </i>Registrate aquí <i class="fas fa-arrow-circle-left"></i></h1>
+            <p class="lead">Y comienza a disfrutar de nuestros beneficios y oportunidades que tenemos para ti.</p>
+
+            <form id="tabla" class="needs-validation .col-md-6 .offset-md-3" novalidate>
+                <label for="validationTooltip00">R.U.T.</label>
+                <input type="text" class="form-control" id="rut" required oninput="checkRut(this)" placeholder="R.U.T." maxlength="12" required>
+                <br>
+                <label for="validationTooltip01">Nombre</label>
+                <input type="text" class="form-control" id="validationTooltip01" placeholder="Nombre" required>
+                <br>
+                <label for="validationTooltip02">Apellidos</label>
+                <input type="text" class="form-control" id="validationTooltip02" placeholder="Apellidos" required>
+                <br>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="validationTooltip03">Correo Electrónico</label>
+                        <input type="email" class="form-control" placeholder="ejemplo@correo.com" id="validationTooltip03" required>
+                    </div>
+                    <br>
+                    <div class="col-6">
+                        <label for="validationTooltip04">Fecha de nacimiento</label>
+                        <input type="date" class="form-control" min="1940-12-30" id="validationTooltip04" required>
+
+                    </div>
+
+                </div>
+                <br>
+                <button class="btn btn-primary" type="reset">Limpiar</button>
+
+                <button class="btn btn-primary" id="submit" type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
